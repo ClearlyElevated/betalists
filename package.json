@@ -1,10 +1,10 @@
 {
   "name": "betalists",
   "version": "1.0.0",
-  "description": "A simple program to pull response data from typeform and split it in to two seperate files, depending on the beta program used",
+  "description": "A simple tool for sorting applications to the Discord Android and iOS betas.",
   "main": "betalists.js",
   "author": "Mikesky",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "request": "^2.81.0"
   }
