@@ -1,0 +1,2 @@
+This folder will be populated with CSV files for uploading to the apple beta program.
+They were placed here instead of the root directory to prevent clutter.
