@@ -1,5 +1,11 @@
 {
-  "token": "Typeform API Key here",
+  "token": "Typeform API key here",
   "form": "Typeform form ID here",
-  "time": ""
+  "time": "",
+  "fields": {
+    "email": "textfield_52454030",
+    "username": "textfield_50892858",
+    "android": "list_52454156_choice_66187090",
+    "ios": "list_52454156_choice_66187091"
+  }
 }
