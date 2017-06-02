@@ -9,16 +9,16 @@ function checkinit() {
   let promise = new Promise((resolve, reject) => {
     fs.readFile('./config.json', 'utf-8', function(err,data) {
       if (!!err) {
-        reject('error in loading config file.');
+        reject(Error(err));
       }
 
       var data = JSON.parse(data);
       if (data.time == '') {
-        data.time = JSON.stringify(Date.now());
+        data.time = JSON.stringify(Date.now()/1000);
         out = JSON.stringify(data, null, 2);
         fs.writeFile('./config.json', out, function(err) {
         if(err) {
-          reject('error in writing to file: '+ err);
+          reject(Error(err));
         }
         resolve('updated');
         });
@@ -37,7 +37,7 @@ function getData(timestamp) {
     qs: {
       key: config.token,
       completed: true,
-      //since: timestamp
+      since: timestamp
     },
     json: true
   };
@@ -63,5 +63,5 @@ checkinit().then((result) => {
   console.log('Last run on '+lastTime);
 });
 
-timestamp = Date.now();
+timestamp = Date.now()/1000;
 getData(config.time);
