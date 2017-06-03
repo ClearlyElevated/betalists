@@ -69,7 +69,7 @@ function sortLists(data) {
         android.push(data[i].answers[config.fields.email]);
       }
       if (data[i].answers.hasOwnProperty(config.fields.ios)) {
-        let line = [data[i].answers[config.fields.username], "Testers", data[i].answers[config.fields.email]];
+        let line = [data[i].answers[config.fields.username], "", data[i].answers[config.fields.email]];
         ios.push(line);
       }
     }
@@ -87,7 +87,7 @@ function updateAndroid(data) {
     flags: 'wx'
   }).on('open', function() {
     for (i =0; i < data.length; ++i) {
-      writer.write(data[i] + ',');
+      writer.write(data[i] + ', ');
     }
   }).on('end', function() {
     writer.end();
