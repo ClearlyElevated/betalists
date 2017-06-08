@@ -65,11 +65,11 @@ function sortLists(data) {
     let ios = [];
     //sort emails into correct arrays
     for (i = 0; i < data.length; ++i) {
-      if (data[i].answers.hasOwnProperty(config.fields.android)) {
-        android.push(data[i].answers[config.fields.email]);
+      if (data[i].answers.hasOwnProperty(config.fields.android_email)) {
+        android.push(data[i].answers[config.fields.android_email]);
       }
-      if (data[i].answers.hasOwnProperty(config.fields.ios)) {
-        let line = [data[i].answers[config.fields.username], "", data[i].answers[config.fields.email]];
+      if (data[i].answers.hasOwnProperty(config.fields.ios_email)) {
+        let line = [data[i].answers[config.fields.username], "", data[i].answers[config.fields.ios_email]];
         ios.push(line);
       }
     }
