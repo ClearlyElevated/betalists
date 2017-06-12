@@ -69,7 +69,7 @@ function sortLists(data) {
         android.push(data[i].answers[config.fields.android_email]);
       }
       if (data[i].answers.hasOwnProperty(config.fields.ios_email)) {
-        let line = [data[i].answers[config.fields.username], "", data[i].answers[config.fields.ios_email]];
+        let line = [data[i].answers[config.fields.username], "", data[i].answers[config.fields.ios_email]+" "];
         ios.push(line);
       }
     }
